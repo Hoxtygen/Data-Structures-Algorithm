@@ -2,6 +2,10 @@
 # The addition of item is at the tail, but the removal of item is from the head or front
 # Real life examples includes lines in banking,restaurant, grocery stores..etc and print jobs sent to the printer for printing
 
+# A more computer/scientific definition of a queue would be as follows:
+An abstract data collection in which the elements can be added to the back called enqueue and
+removed from the front called dequeue which makes it a FIFO data structure.
+
 # Queue Methods
 
 #1 enqueue(element(s)): This adds a new item (or several items) at the back of the queue.
