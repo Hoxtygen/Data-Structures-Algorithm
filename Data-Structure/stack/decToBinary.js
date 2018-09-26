@@ -36,7 +36,7 @@ class Stack {
     
 }
 
-function divideBy2(decNumber) {
+ function divideBy2(decNumber) {
     let remStack = new Stack();
     let rem;
     let binaryString = "";
@@ -55,4 +55,4 @@ function divideBy2(decNumber) {
     return binaryString;
 }
 
-console.log(divideBy2(232));
+console.log(divideBy2(232)); 

@@ -35,7 +35,9 @@ class Stack {
 }
 
 function isPalindrome(word) {
-    word = word.replace(/\W_/gi, "");
+    // word = word.replace(/\W_/gi, "");
+    
+word = word.replace(/[^A-Za-z]/g, "").toLowerCase();
     //console.log(word);
     let paliStack = new Stack()
     for (let i = 0; i < word.length; i++) {
