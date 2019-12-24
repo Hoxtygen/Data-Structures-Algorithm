@@ -38,6 +38,10 @@ Dictionary.prototype.getSize = function () {
     return Object.keys(this.dataStore).length
 }
 
+Dictionary.prototype.clear = function () {
+    return this.dataStore = {}
+}
+
 
 /* 
 Alternatively,
@@ -71,4 +75,5 @@ console.log('fan =>', Toyin.findKey('fan'))
 console.log(Toyin.has('FesTaC'));
 
 Toyin.showAll()
+Toyin.clear()
 console.log(Toyin.getSize())
