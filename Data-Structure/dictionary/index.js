@@ -20,9 +20,14 @@ Dictionary.prototype.remove = function (key) {
 }
 
 Dictionary.prototype.showAll = function () {
+    const storeData = []
    for(const key  in this.dataStore) {
-    console.log(`${key} => ${this.dataStore[key]}`);
+       storeData.push(key)
+    // console.log(`${key} => ${this.dataStore[key]}`);
    }
+   return storeData.sort().map(item => {
+       return `${item} => ${this.dataStore[item]}`
+   });
 }
 
 Dictionary.prototype.has = function (key) {
@@ -71,9 +76,9 @@ Toyin.add('Festac', 'Lagos');
 Toyin.add('Lorem', 'Latin');
 Toyin.add('Jump', 'Ocean');
 Toyin.remove('Liu Kang')
-console.log('fan =>', Toyin.findKey('fan'))
-console.log(Toyin.has('FesTaC'));
+// console.log('fan =>', Toyin.findKey('fan'))
+// console.log(Toyin.has('FesTaC'));
 
-Toyin.showAll()
-Toyin.clear()
-console.log(Toyin.getSize())
+console.log(Toyin.showAll())
+// Toyin.clear()
+// console.log(Toyin.getSize())
