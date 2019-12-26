@@ -36,23 +36,20 @@ class Stack {
     
 }
 
- function divideBy2(decNumber) {
-    let remStack = new Stack();
-    let rem;
+ function converter(decNumber) {
+    let decimalConverter = new Stack();
+    let remainder;
     let binaryString = "";
 
     while (decNumber > 0) {
-        rem = Math.floor(decNumber % 2);
-        remStack.push(rem);
+        remainder = Math.floor(decNumber % 2);
+        decimalConverter.push(remainder);
         decNumber = Math.floor(decNumber / 2);
     }
-
-    while (!remStack.isEmpty()) {
-        binaryString += remStack.pop();
+    while (!decimalConverter.isEmpty()) {
+        binaryString += decimalConverter.pop();
     }
-    //console.log(binaryString);
-    
     return binaryString;
 }
 
-console.log(divideBy2(232)); 
+console.log(converter(255)); 
