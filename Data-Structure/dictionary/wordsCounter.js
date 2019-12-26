@@ -4,10 +4,9 @@ class Dictionary    {
     }
 
     wordCounter(words) {
-        words = words.split(' ');
+        words = words.toLowerCase().split(' ');
         let wordsLen = words.length;
         for (let i = 0; i < wordsLen; i++) {
-            words[i] = words[i].toLowerCase();
             if (this.dataStore[words[i]]) {
                 this.dataStore[words[i]]++
             }
