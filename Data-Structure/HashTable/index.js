@@ -7,4 +7,4 @@ for (let i = 0; i < namesArray.length; i++) {
    HashMe.insert(namesArray[i]);
 }
 
-HashMe.showTable()
+HashMe.showTable();
