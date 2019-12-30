@@ -13,9 +13,9 @@ HashTable.prototype.simpleHash = function (data) {
     return total % this.table.length;
 }
 
-HashTable.prototype.insert = function (data) {
-    let pos = this.betterHash(data);
-    this.table[pos] = data;
+HashTable.prototype.insert = function (key, value) {
+    let hashed_data = this.betterHash(key);
+    this.table[hashed_data] = value;
 }
 
 HashTable.prototype.showTable = function () {
@@ -36,8 +36,12 @@ HashTable.prototype.betterHash = function (data) {
     if (total < 0) {
         total += this.table.length - 1;
     }
-    console.log("Hash value: " + data + "=>" + total );
+    // console.log("Hash value: " + data + "=>" + total );
     return parseInt(total);
+}
+
+HashTable.prototype.getData = function (key) {
+    return this.table[this.betterHash(key)];
 }
 
 module.exports = HashTable;
